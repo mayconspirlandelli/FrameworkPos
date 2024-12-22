@@ -25,7 +25,10 @@ SECRET_KEY = "django-insecure-@d=n0aw0zpkik9^rfci%*g2de+9@6%v3=j!r5++9(--2mnld5m
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+#Estou roando no VSCode Web no Github Codespace deve incluir o endereço a URL.
+#ALLOWED_HOSTS = ['localhost', '127.0.0.1', 'https://supreme-parakeet-76vwvggrjw2gjj-8000.app.github.dev/admin/login/']
+ALLOWED_HOSTS = ['localhost', '127.0.0.1', 'https://localhost:8000/']
+CSRF_TRUSTED_ORIGINS = ['https://localhost:8000', 'http://127.0.0.1:8000']
 
 
 # Application definition

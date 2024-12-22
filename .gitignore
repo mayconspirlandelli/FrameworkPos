@@ -9,6 +9,7 @@ media
 # Modulos #
 node_modules/
 *init*
+*pycache*
 
 
 # Backup files # 
