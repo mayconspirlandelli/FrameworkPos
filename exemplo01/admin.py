@@ -1,8 +1,22 @@
 from django.contrib import admin
 from .models import * 
 
+@admin.action(description="Habilitar Registros Selecionados")
+def habilitar_pessoas(ModelAdmin, request, queryset):
+    for p in queryset:
+        p.ativo = True
+        p.save()
+
+
+@admin.action(description="Desabilitar Registros Selecionados")
+def desabilitar_pessoas(ModelAdmin, request, queryset):
+    queryset.update(ativo=False)
+
+    
 class PessoaCustomizado(admin.ModelAdmin):
-    list_display = ('nome', 'email', 'celular', 'funcao', 'calcula_idade', 'ativo',)
+    list_display = ('nome', 'email', 'celular', 'funcao', 'calcula_idade', 'ativo' , )
+    actions = [habilitar_pessoas, desabilitar_pessoas]
+
 
     @admin.display(description='Idade')
     def calcula_idade(self, obj):
