@@ -1,0 +1,40 @@
+{% load static %}
+{% load bootstrap5 %}
+{% bootstrap_css %}
+{% bootstrap_javascript %}
+{% bootstrap_messages %}
+
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>
+            Página 03
+        </title>
+    </head>
+    <body>
+        <h1>Essa paigna é 03 com bootstrap5 </h1>
+        <img width="15%" src="{% static 'imagem01.png' %}"
+            class="img-fluid" altTeste""></img>
+        <p class="h2">Colocando estilo na página. </p>
+        <p>dbpratico\exemplo01\templates\pagina3.html</p>
+        <div class="container">
+            <div class="row" style="line-height: 1;">
+                <div class="col-md-12 col-sm-12 col-xs-12">
+                    <table class="table table-striped table-hover">
+                        <th>Nome</th>
+                        <th>Email</th>
+                        <th>Celular</th>
+                        {% for regs in pessoas %}
+                        <tr>
+                            <td>{{ regs.nome }}</td>
+                            <td>{{ regs.email }}</td>
+                            <td>{{ regs.celular }}</td>
+                        </tr>
+                        {% endfor %}
+                    </table>
+                </div>
+            </div>
+        </div>
+    </body>
+</html>

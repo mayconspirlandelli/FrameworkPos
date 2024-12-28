@@ -16,3 +16,10 @@ def pagina2 (request):
     registros = pessoa.objects.all()
     dicionario['pessoas'] = registros 
     return render(request, 'pagina2.html', dicionario)
+
+def pagina3 (request):
+    from .models import pessoa
+    dicionario = {}
+    registros = pessoa.objects.all()
+    dicionario['pessoas'] = registros
+    return render(request, 'pagina3.html', dicionario)
