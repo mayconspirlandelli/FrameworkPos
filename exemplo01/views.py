@@ -25,13 +25,11 @@ def pagina3 (request):
     return render(request, 'pagina3.html', dicionario)
 
 
-from django.views.generic import ListView
-from .models import pessoa
 from django.urls import reverse_lazy
 from django.views.generic.edit import CreateView
+from .models import pessoa
 class pessoa_create(CreateView):
-    from .models import pessoa
     model = pessoa
     fields = ['nome', 'email', 'celular', 'funcao', 'nascimento', 'ativo']
     def get_sucess_url(self):
-        return reverse_lazy('pagina3.html')
+        return reverse_lazy('pessoa_create')
