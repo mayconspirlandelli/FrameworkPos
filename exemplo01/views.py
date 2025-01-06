@@ -50,3 +50,14 @@ class pessoa_update(UpdateView):
     fields =[ 'nome', 'email', 'celular', 'funcao', 'nascimento', 'ativo']
     def get_sucess_url(self):
         return reverse_laz('pessoa_list_alias')
+
+
+from django.views.generic.edit import DeleteView
+class pessoa_delete(DeleteView):
+    from .models import pessoa 
+    model = pessoa        
+    fields =[ 'nome', 'email', 'celular', 'funcao', 'nascimento', 'ativo']
+    template_name_suffix = '_delete'
+    def get_sucess_url(self):
+        return reverse_lazy('pessoa_list_alias')
+

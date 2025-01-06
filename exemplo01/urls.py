@@ -10,4 +10,5 @@ urlpatterns = [
  path('pessoa_create/', views.pessoa_create.as_view(), name='pessoa_create_alias'),
  path('pessoa_list/', views.pessoa_list.as_view(), name='pessoa_list_alias'),
  path('pessoa_update/<int:pk>/', views.pessoa_update.as_view(), name='pessoa_update_alias'),
+ path('pessoa_delete/<int:pk>/', views.pessoa_delete.as_view(), name='pessoa_delete_alias'),
 ]
