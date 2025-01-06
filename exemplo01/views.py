@@ -41,3 +41,12 @@ class pessoa_list(ListView):
     model = pessoa
     #Exibe apenas registros ativos.
     #queryset = pessoa.objects.filter(ativo=True)
+
+
+from django.views.generic.edit import UpdateView
+class pessoa_update(UpdateView):
+    from .models import pessoa
+    model = pessoa
+    fields =[ 'nome', 'email', 'celular', 'funcao', 'nascimento', 'ativo']
+    def get_sucess_url(self):
+        return reverse_laz('pessoa_list_alias')

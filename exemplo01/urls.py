@@ -9,5 +9,5 @@ urlpatterns = [
  path('pagina3', views.pagina3, name='pagina3'),
  path('pessoa_create/', views.pessoa_create.as_view(), name='pessoa_create_alias'),
  path('pessoa_list/', views.pessoa_list.as_view(), name='pessoa_list_alias'),
- #path('pessoa_update/<int:pk>/', views.pessoa_update.as_view(), name=''),
+ path('pessoa_update/<int:pk>/', views.pessoa_update.as_view(), name='pessoa_update_alias'),
 ]
