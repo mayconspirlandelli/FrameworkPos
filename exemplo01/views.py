@@ -33,3 +33,11 @@ class pessoa_create(CreateView):
     fields = ['nome', 'email', 'celular', 'funcao', 'nascimento', 'ativo']
     def get_sucess_url(self):
         return reverse_lazy('pessoa_create')
+
+
+from django.views.generic import ListView
+class pessoa_list(ListView):
+    from .models import pessoa
+    model = pessoa
+    #Exibe apenas registros ativos.
+    #queryset = pessoa.objects.filter(ativo=True)
