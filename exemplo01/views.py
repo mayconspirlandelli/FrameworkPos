@@ -61,3 +61,20 @@ class pessoa_delete(DeleteView):
     def get_sucess_url(self):
         return reverse_lazy('pessoa_list_alias')
 
+
+def pagina4 (request):
+    nome = request.POST.get('nome')
+    email = request.POST.get('email')
+    celular = request.POST.get('celular')
+    funcao = request.POST.get('funcao')
+    nascimento = request.POST.get('nascimento')
+    ativo = request.POST.get('ativo')
+
+    print("Nome:", nome)
+    print("email:", email)
+    print("Celular:", celular)
+    print("Função:", funcao)
+    print("Nascimento:", nascimento)
+    print("Ativo:", ativo)
+    
+    return render(request, 'pagina4.html')
