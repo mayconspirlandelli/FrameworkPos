@@ -130,3 +130,11 @@ def pagina5(request):
         pessoa.objects.create(nome=xnome, email=xemail, celular=xcelular, 
         funcao=xfuncao, nascimento=xnascimento, ativo=xativo)
     return render(request, 'pagina5.html')    
+
+
+def pagina6 (request):
+    from .models import pessoa
+    dicionario = {}
+    registros = pessoa.objects.all()
+    dicionario['pessoas'] = registros 
+    return render(request, 'pagina6.html', dicionario)
