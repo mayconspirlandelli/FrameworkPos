@@ -8,7 +8,6 @@ def index(request):
     senha = request.POST.get('password')
     user = authenticate(username=usuario, password=senha)
     if (user is not None):
-
         login(request, user)
         request.session['username'] = usuario
         request.session['password'] = senha
@@ -20,6 +19,17 @@ def index(request):
         return redirect('menu_alias')
     else:
         return render(request, 'index.html')
+
+from django_tables2 import SingleTableView
+class pessoa_menu(SingleTableView):
+    from .models import pessoa
+    from .tables import pessoa_table
+    model = pessoa 
+    tables_class = pessoa_table
+    template_name_suffix = '_menu'
+    table_pagination = {"per_page": 5}
+    template_name = 'exemplo01/pessoa_menu.html'
+
 
 def pagina0 (request):
     return render(request, 'pagina0.html')    

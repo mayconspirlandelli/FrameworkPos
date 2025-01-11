@@ -8,6 +8,7 @@ urlpatterns = [
  path('pagina2', views.pagina2, name='pagina2'),
  path('pagina3', views.pagina3, name='pagina3'),
  path('pagina4', views.pagina4, name='pagina4'),
+ path('menu', views.pessoa_menu.as_view(), name='pessoa_menu_alias'),
  path('pessoa_create/', views.pessoa_create.as_view(), name='pessoa_create_alias'),
  path('pessoa_list/', views.pessoa_list.as_view(), name='pessoa_list_alias'),
  path('pessoa_update/<int:pk>/', views.pessoa_update.as_view(), name='pessoa_update_alias'),
