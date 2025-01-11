@@ -13,3 +13,4 @@ class pessoa(models.Model):
     
     class Meta:
         ordering = ['nome', 'funcao']
+

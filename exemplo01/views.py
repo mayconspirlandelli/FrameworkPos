@@ -105,3 +105,28 @@ def pagina4 (request):
     print("Ativo:", ativo)
     
     return render(request, 'pagina4.html')
+
+
+def pagina5(request):
+    xnome = request.POST.get('nome')
+    xemail = request.POST.get('email')
+    xcelular = request.POST.get('celular')
+    xfuncao = request.POST.get('funcao')
+    xnascimento = request.POST.get('nascimento')
+    xativo = request.POST.get('ativo')
+    
+    print("Nome:", xnome)
+    print("eMail:", xemail)
+    print("Celular:", xcelular)
+    print("Funcao:", xfuncao)
+    print("Nascimento:", xnascimento)
+    print("ativo:", xativo)
+    
+    if (xnome is not None):
+        xativo = False
+        if (xativo == 'on'):
+            xativo = True
+        from .models import pessoa    
+        pessoa.objects.create(nome=xnome, email=xemail, celular=xcelular, 
+        funcao=xfuncao, nascimento=xnascimento, ativo=xativo)
+    return render(request, 'pagina5.html')    
