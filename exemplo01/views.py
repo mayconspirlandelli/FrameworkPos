@@ -138,3 +138,12 @@ def pagina6 (request):
     registros = pessoa.objects.all()
     dicionario['pessoas'] = registros 
     return render(request, 'pagina6.html', dicionario)
+
+
+def pagina8 (request):
+    from .models import pessoa
+    dicionario = {}
+    registros = pessoa.objects.all()
+    dicionario['pessoas'] = registros 
+    return render(request, 'exemplo01/listar_pessoas.html', dicionario)
+    

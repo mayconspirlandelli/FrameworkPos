@@ -44,7 +44,8 @@ INSTALLED_APPS = [
     "exemplo02",
     "bootstrap5",
     "django_tables2", 
-]
+    "webhook_app",
+    ]
 
 MIDDLEWARE = [
     "django.middleware.security.SecurityMiddleware",

@@ -22,5 +22,6 @@ urlpatterns = [
     path('', include('exemplo01.urls')),
     path('exemplo01/', include('exemplo01.urls')),
     path('exemplo02/', include('exemplo02.urls')),
+    path('webhook_app/', include('webhook_app.urls')),
     path("admin/", admin.site.urls),
 ]
