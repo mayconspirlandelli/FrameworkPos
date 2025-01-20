@@ -1,20 +1,16 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-    <head>
-        <meta charset="UTF-8">
-        <title>
-            Página 02
-        </title>
-    </head>
-    <body>
-        <h1>Essa paigna é 02 com ORM </h1>
-        <p>Minha prmeira pagina renderizada em Django.</p>
-        <p>dbpratico\exemplo01\templates\pagina0.html</p>
-        {% for regs in pessoas %}
-            <p>{{ regs.nome }} - {{ regs.email }} - {{ regs.celular }}</p>          
+  <head>
+    <meta charset="UTF-8" />
+    <title>Página 02</title>
+  </head>
+  <body>
+    <h1>Essa paigna é 02 com ORM</h1>
+    <p>Minha prmeira pagina renderizada em Django.</p>
+    <p>dbpratico\exemplo01\templates\pagina0.html</p>
+    {% for regs in pessoas %}
+    <p>{{ regs.nome }} - {{ regs.email }} - {{ regs.celular }}</p>
 
-            {% endfor %}
-    </body>
-
-
+    {% endfor %}
+  </body>
 </html>

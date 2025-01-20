@@ -1,9 +1,6 @@
-{% load static %}
-{% load bootstrap5 %}
-{% bootstrap_css %}
-{% bootstrap_javascript %}
-{% bootstrap_messages %}
-<!DOCTYPE html>
+{% load static %} {% load bootstrap5 %} {% bootstrap_css %} {%
+bootstrap_javascript %} {% bootstrap_messages %}
+<!doctype html>
 <html>
   <head>
     <title>Form POSTS</title>
@@ -13,50 +10,85 @@
       <div class="col-md-12 col-sm-12 col-xs-12">
         <center>
           <p>bdpratico\exemplo01\templates\pagina4.html</p>
-          <img src="{% static 'imagem01.png' %}" class="img-fluid" alt="Teste" width="15%" />
+          <img
+            src="{% static 'imagem01.png' %}"
+            class="img-fluid"
+            alt="Teste"
+            width="15%"
+          />
           <form method="POST" enctype="multipart/form-data">
             {% csrf_token %}
             <div class="col-md-12 col-sm-12 col-xs-12">
-              <div class="row" style="line-height: 1;">
+              <div class="row" style="line-height: 1">
                 <div class="col-md-1 col-sm-1 col-xs-1"></div>
                 <div class="col-md-8 col-sm-12 col-xs-12">
                   <label for="nome">Nome</label>
-                  <input type="text" name="nome" id="nome" placeholder="Digite o nome da pessoa">
+                  <input
+                    type="text"
+                    name="nome"
+                    id="nome"
+                    placeholder="Digite o nome da pessoa"
+                  />
                 </div>
               </div>
-              <br>
-              <div class="row" style="line-height: 1;">
+              <br />
+              <div class="row" style="line-height: 1">
                 <div class="col-md-1 col-sm-1 col-xs-1"></div>
                 <div class="col-md-8 col-sm-12 col-xs-12">
-                    <label for="email">eMail</label>
-                    <input type="text" name="email" id="email" placeholder="Digite o e-mail da pessoa">
+                  <label for="email">eMail</label>
+                  <input
+                    type="text"
+                    name="email"
+                    id="email"
+                    placeholder="Digite o e-mail da pessoa"
+                  />
                 </div>
               </div>
-              <br>
-              <div class="row" style="line-height: 1;">
+              <br />
+              <div class="row" style="line-height: 1">
                 <div class="col-md-1 col-sm-1 col-xs-1"></div>
                 <div class="col-md-4 col-sm-4 col-xs-4">
-                    <label for="celular">Celular</label>
-                    <input type="text" name="celular" id="celular" placeholder="Digite o celular da pessoa">
+                  <label for="celular">Celular</label>
+                  <input
+                    type="text"
+                    name="celular"
+                    id="celular"
+                    placeholder="Digite o celular da pessoa"
+                  />
                 </div>
                 <div class="col-md-4 col-sm-4 col-xs-4">
-                    <label for="funcao">Função</label>
-                    <input type="text" name="funcao" id="funcao" placeholder="Digite a funcao da pessoa">
+                  <label for="funcao">Função</label>
+                  <input
+                    type="text"
+                    name="funcao"
+                    id="funcao"
+                    placeholder="Digite a funcao da pessoa"
+                  />
                 </div>
               </div>
-              <br>
-              <div class="row" style="line-height: 1;">
+              <br />
+              <div class="row" style="line-height: 1">
                 <div class="col-md-1 col-sm-1 col-xs-1"></div>
                 <div class="col-md-4 col-sm-4 col-xs-4">
-                    <label for="nascimento">Nascimento</label>
-                    <input type="date" name="nascimento" id="nascimento" placeholder="Digite o nascimento da pessoa">
+                  <label for="nascimento">Nascimento</label>
+                  <input
+                    type="date"
+                    name="nascimento"
+                    id="nascimento"
+                    placeholder="Digite o nascimento da pessoa"
+                  />
                 </div>
                 <br /><br />
                 <div class="col-md-1 col-sm-1 col-xs-1">
-                    <label for="ativo">Ativo</label>
-                    <input type="checkbox" name="ativo" id="ativo" placeholder="Selecione o status da pessoa">
+                  <label for="ativo">Ativo</label>
+                  <input
+                    type="checkbox"
+                    name="ativo"
+                    id="ativo"
+                    placeholder="Selecione o status da pessoa"
+                  />
                 </div>
-                <br><br>
+                <br /><br />
                 <div class="col-md-1 col-sm-1 col-xs-1">
                   <button type="submit" class="btn btn-primary">Salvar</button>
                 </div>
