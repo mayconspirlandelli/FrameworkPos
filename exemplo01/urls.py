@@ -1,7 +1,6 @@
 from django.contrib import admin
 from django.urls import path
 from . import views
-
 urlpatterns = [
  path('', views.index, name='index_alias'),   
  path('pagina0', views.pagina0, name='pagina0'),
@@ -11,7 +10,6 @@ urlpatterns = [
  path('pagina4', views.pagina4, name='pagina4'),
  path('pagina5', views.pagina5, name='pagina5'),
  path('pagina6', views.pagina6, name='pagina6'),
- path('pagina8', views.pagina8, name='pagina8'),
  path('menu', views.pessoa_menu.as_view(), name='pessoa_menu_alias'),
  path('pessoa_create/', views.pessoa_create.as_view(), name='pessoa_create_alias'),
  path('pessoa_list/', views.pessoa_list.as_view(), name='pessoa_list_alias'),
